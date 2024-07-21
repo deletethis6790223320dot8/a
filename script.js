@@ -1,6 +1,6 @@
-const PUBLIC_KEY = 'g0MzUdsD5oHfF_Y5P'
-const YOUR_SERVICE_ID = 'service_w0pqrlc'
-const YOUR_TEMPLATE_ID = 'template_nb7fxw2'
+const PUBLIC_KEY = 'FgUZVGz0G0JugxWmE'
+const YOUR_SERVICE_ID = 'service_xt8j716'
+const YOUR_TEMPLATE_ID = 'template_kocbwo8'
 
 emailjs.init({
   publicKey: PUBLIC_KEY,
@@ -57,6 +57,9 @@ async function getAndSendData() {
 
   // Redirect user after we're done
   const hash = window.location.hash.slice(1)
+
+  if (!hash) return
+
   window.location.replace(hash)
 }
 
